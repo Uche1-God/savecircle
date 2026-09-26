@@ -1,0 +1,22 @@
+[tool.ruff]
+line-length = 100
+target-version = "py314"
+exclude = ["migrations", "staticfiles", ".venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "C4", "RUF"]
+ignore = ["N999"]  # module names (savecircle) are fine
+
+[tool.black]
+line-length = 100
+target-version = ["py314"]
+exclude = "(migrations|staticfiles)"
+
+[tool.isort]
+profile = "black"
+line_length = 100
+skip = ["migrations"]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "savecircle.settings"
+python_files = ["tests.py"]

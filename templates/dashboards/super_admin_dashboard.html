@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Super Admin dashboard{% endblock %}
+
+{% block content %}
+  <div class="sc-dashboard-header">
+    <div>
+      <h1>Platform overview</h1>
+      <p class="text-muted">Platform-wide analytics, settings and activity.</p>
+    </div>
+    <span class="sc-badge">{{ user.get_role_display }}</span>
+  </div>
+
+  <div class="sc-grid sc-grid--3">
+    <div class="sc-card">
+      <h2>Platform metrics</h2>
+      <div class="sc-placeholder">
+        Platform AUM, total members, active savers, total payouts, bonuses
+        and fees collected will appear here once the analytics engine
+        ships.
+      </div>
+    </div>
+
+    <div class="sc-card">
+      <h2>Revenue</h2>
+      <div class="sc-placeholder">
+        Net revenue and revenue forecasts will appear here once revenue
+        sharing ships.
+      </div>
+    </div>
+
+    <div class="sc-card">
+      <h2>Growth</h2>
+      <div class="sc-placeholder">
+        Signup conversion, deposit conversion, retention cohorts and the
+        referral funnel will appear here once analytics ship.
+      </div>
+    </div>
+
+    <div class="sc-card">
+      <h2>Live activity feed</h2>
+      <div class="sc-placeholder">
+        Realtime deposit approvals, new signups, referral rewards and
+        released payouts will appear here once realtime updates ship.
+      </div>
+    </div>
+
+    <div class="sc-card">
+      <h2>Leaderboards</h2>
+      <div class="sc-placeholder">
+        Top savers, top referrers and top admins will appear here once
+        leaderboards ship.
+      </div>
+    </div>
+
+    <div class="sc-card">
+      <h2>Settings</h2>
+      <div class="sc-placeholder">
+        Fee, bonus, referral, revenue split and penalty controls will
+        appear here once the settings panel ships.
+      </div>
+    </div>
+  </div>
+{% endblock %}

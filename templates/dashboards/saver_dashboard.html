@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Your dashboard{% endblock %}
+
+{% block content %}
+  <div class="sc-dashboard-header">
+    <div>
+      <h1>Welcome back, {{ user.first_name_display }}</h1>
+      <p class="text-muted">Here's where your savings circle will take shape.</p>
+    </div>
+    <span class="sc-badge">{{ user.get_role_display }}</span>
+  </div>
+
+  <div class="sc-grid sc-grid--2">
+    <div class="sc-card">
+      <h2>Savings plans</h2>
+      <div class="sc-placeholder">
+        Your savings plans, progress rings and countdown timers will appear
+        here once the savings plan feature ships.
+      </div>
+    </div>
+
+    <div class="sc-card">
+      <h2>Referral wallet</h2>
+      <p class="sc-metric-label">Referral code</p>
+      <p class="sc-metric-value">{{ user.referral_code }}</p>
+      <div class="sc-placeholder" style="margin-top: 1rem;">
+        Cycle and lifetime referral earnings, active referrals and the
+        referral activity feed will appear here once the referral system
+        ships.
+      </div>
+    </div>
+
+    <div class="sc-card">
+      <h2>Gamification</h2>
+      <div class="sc-placeholder">
+        Streaks, badges, daily spin and trivia will appear here once the
+        gamification system ships.
+      </div>
+    </div>
+
+    <div class="sc-card">
+      <h2>Deposit activity</h2>
+      <div class="sc-placeholder">
+        30 and 90 day deposit sparklines will appear here once the
+        analytics engine ships.
+      </div>
+    </div>
+  </div>
+{% endblock %}
